@@ -1,5 +1,5 @@
 # OpenAi Playground Clone
-
+### not provide the OpenAI key so the deployed link does not give responses back from the ChatGPT
 ### images of playground
 
 <img src="https://github.com/Rahul917-Kumar/openai-playground-clone/assets/82316009/03fd9f93-cdc9-45e1-88f4-a08bb3d19314.png" width=80% height=80%>
