@@ -40,7 +40,7 @@ const GptReponseChat = ():JSX.Element => {
         headers: {
             'Content-Type': 'application/json',
             Authorization:
-            'Bearer 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',
+            'Bearer sk-VZNPdadMy0lMux4GVW3z',
         },
         body: JSON.stringify({
             model: 'gpt-3.5-turbo',
