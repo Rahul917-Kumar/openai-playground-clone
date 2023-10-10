@@ -17,7 +17,7 @@ const deletePaticularChatinChats = (array:IchatFormat[], id:number):IchatFormat[
 export const ChatDetailStore = create<IuserAssistantformat>((set)=>({
     chats:[{
         role:"user",
-        content:""
+        content:"help me to print hello world in cpp"
     }],
     addChats:(newChats:IchatFormat[])=>set((state)=>({
         ...state,

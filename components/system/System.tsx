@@ -13,10 +13,14 @@ const System = ():JSX.Element => {
 //   }
   return (
     <Box >
-        <Typography variant="h6" component="h6">
+        <Typography variant="h6" component="h6" sx={{color:"black"}}>
             System
         </Typography>
-        <TextField onChange={(e)=>updatesystemInput(e.target.value)} value ={systeminput}  />
+        <TextField 
+          onChange={(e)=>updatesystemInput(e.target.value)} 
+          value ={systeminput} fullWidth rows={28} 
+          multiline={true}
+        />
     </Box>
   )
 }

@@ -3,6 +3,7 @@ import React from 'react'
 import { ChatDetailStore } from '@/store/chat_store_interface/chat_store'
 import ChatShow_input from './ChatShow_input'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import Divider from '@mui/material/Divider';
 
 const Chat = ():JSX.Element=> {
   const {chats, addChats} = ChatDetailStore((state)=>({
@@ -31,12 +32,14 @@ const Chat = ():JSX.Element=> {
             chats.map((chat, key)=>{
                 return (
                     <>
-                       <ChatShow_input  id={key} role={chat.role} content={chat.content} len ={chats.length} /> 
+                       <ChatShow_input  id={key} role={chat.role} content={chat.content} len ={chats.length} />
+                       <Divider />
                     </>
                 )
             })
         }
-        <Box sx={{cursor:"pointer", marginTop:"50px"}} onClick={ addNewChat} >
+
+        <Box sx={{cursor:"pointer",  padding:"1rem" , "&:hover":{ backgroundColor: '#e0f2f1' }}} onClick={ addNewChat}  >
           <Typography component="p" sx={{display:"flex", justifyContent:":center", alignItems:"center"}}>
             <span>
               <AddCircleOutlineIcon/>
@@ -44,6 +47,7 @@ const Chat = ():JSX.Element=> {
             Add Message
          </Typography>
         </Box>
+
     </Box>
   )
 }

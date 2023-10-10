@@ -21,7 +21,6 @@ const ChatShow_input = (props:argu):JSX.Element => {
   const updateChatEvent = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
     // setInput(e.target.value)
     let obj = {
-        id:props.id,
         role:props.role,
         content:e.target.value
     }
@@ -45,9 +44,21 @@ const ChatShow_input = (props:argu):JSX.Element => {
 
 
   return (
-    <Box sx={{display:"flex", justifyContent:"space-between", margin:"1px"}}>
-        <Box>
-            <Button variant="outlined" onClick = { updateRole }> {props.role} </Button>
+    <Box 
+        sx={{display:"flex", 
+        justifyContent:"space-between", 
+        marginTop:"2rem", 
+        marginBottom:"2rem",
+        "&:hover":{ backgroundColor: '#e0f2f1' },
+        padding:"1rem 0.5rem 1rem 0.5rem"
+    }}
+    >
+        <Box sx={{display:"flex",justifyContent:"center", alignItems:"center"}}>
+            <Button 
+            variant="outlined" 
+            onClick = { updateRole }
+            sx={{border:"none", "&:hover":{border:"none", backgroundColor:"#80cbc4"}, color:"black", fontWeight:"bold"}}
+            > {props.role} </Button>
         </Box>
         <Box>
             <TextField 
@@ -55,10 +66,16 @@ const ChatShow_input = (props:argu):JSX.Element => {
                 placeholder={`Enter an ${props.role} message here`} 
                 value = {props.content}
                 sx={{width:"500px"}}
+                variant='standard'
+                InputProps={{
+                        disableUnderline: true, 
+                        style:{fontSize: 20}
+                }}
             />
         </Box>
-        
-        <DoDisturbOnIcon sx={{cursor:"pointer" , color:"grey"}} onClick={()=>deletePaticularChat(props.id)} />
+        <Box sx={{display:"flex",justifyContent:"center", alignItems:"center"}}>
+            <DoDisturbOnIcon sx={{cursor:"pointer" , color:"grey"}} onClick={()=>deletePaticularChat(props.id)} />
+        </Box>
     </Box>
   )
 }
