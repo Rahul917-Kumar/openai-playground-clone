@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OpenAi Playground Clone
+
+### images of playground
+
+<img src="https://github.com/Rahul917-Kumar/openai-playground-clone/assets/82316009/03fd9f93-cdc9-45e1-88f4-a08bb3d19314.png" width=50% height=50%>
+
+<img src="https://github.com/Rahul917-Kumar/openai-playground-clone/assets/82316009/9886825c-c43a-4f89-90bb-0e928b92c359.png" width=50% height=50%>
+
+<img src="https://github.com/Rahul917-Kumar/openai-playground-clone/assets/82316009/ebb4e417-6bce-4ccf-8a1c-47fb383ae76d.png" width=50% height=50%>
+
+#### we can change the roles of the previously sent messages as well as the current message
+<img src="https://github.com/LokeshRM/E-vault/assets/82316009/ce0d9606-eac1-43bf-b746-09b0848e50fc.png" width=50% height=50%>
+
+
 
 ## Getting Started
 
