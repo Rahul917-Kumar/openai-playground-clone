@@ -69,7 +69,7 @@ const ChatShow_input = (props:argu):JSX.Element => {
                 variant='standard'
                 InputProps={{
                         disableUnderline: true, 
-                        style:{fontSize: 20}
+                        style:{fontSize: 18}
                 }}
             />
         </Box>

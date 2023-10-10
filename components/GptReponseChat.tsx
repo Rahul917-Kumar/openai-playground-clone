@@ -40,7 +40,7 @@ const GptReponseChat = ():JSX.Element => {
         headers: {
             'Content-Type': 'application/json',
             Authorization:
-            'Bearer sk-VZNPdadMy0lMux4GVW3z',
+            `Bearer ${ process.env.NEXT_PUBLIC_OPENAI_API_KEY }  `,
         },
         body: JSON.stringify({
             model: 'gpt-3.5-turbo',
@@ -68,7 +68,8 @@ const GptReponseChat = ():JSX.Element => {
 
             })
             .catch((err) => {
-                console.log(err + ' haa bhai ja soja');
+                setLoading(false)
+                console.log(err );
             });
 
         // as soon as i will get response i will add it to reponseChat and iterate it 
@@ -78,10 +79,23 @@ const GptReponseChat = ():JSX.Element => {
         let newArray:IchatFormat[] =[]
         deleteChats(newArray)
     }
+
+
+    const updateResponseChatRole = (key:number)=>{
+        let newArray = [...responseChat]
+        let role = "user"
+        if (newArray[key].role=="user"){
+            role = "assistant"
+        } 
+        newArray[key].role = role
+        setResponseChat([...responseChat])
+
+    }
+
   return (
     <>
     <Box sx={{ height:"80vh", maxHeight:"80vh", overflowY: "scroll"}}>
-        <ResponseChat response ={responseChat} loading = {loading}/>
+        <ResponseChat response ={responseChat} loading = {loading} updateResponseChatRole={updateResponseChatRole} />
         <Userchat />
         
     </Box>

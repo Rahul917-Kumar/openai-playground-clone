@@ -18,7 +18,7 @@ const System = ():JSX.Element => {
         </Typography>
         <TextField 
           onChange={(e)=>updatesystemInput(e.target.value)} 
-          value ={systeminput} fullWidth rows={28} 
+          value ={systeminput} fullWidth rows={25} 
           multiline={true}
         />
     </Box>

@@ -1,0 +1,13 @@
+.grid{
+    display: grid;
+    grid-template-columns:1fr 10fr	;
+    grid-gap:1rem;
+}
+
+.grid-first{
+    grid-column:1/2;
+}
+
+.grid_second{
+    grid-column:2/3;
+}
